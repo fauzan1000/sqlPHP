@@ -1,0 +1,28 @@
+
+soal 1
+-buat database:
+
+soal 2
+create database myshop; 
+-tabel users:
+create table users(id int auto_increment primary key, name varchar(255), email varchar(255), password varchar(255)); 
+-tabel categories:
+create table categories(id int auto_increment primary key, name varchar(255)); 
+-pembuatan items:
+create table items(id int auto_increment primary key, name varchar(255), description varchar(255), price int, stock int, category_id int, foreign key(category_id) references categories(id);
+
+soal 3
+-memasukan data ke:
+--users:
+insert into users (name, email, password) values ("John Doe", "john@doe.com","john123");
+--categories:
+insert into categories(name) values ("gadget"), ("cloth"), ("men"), ("women"), ("branded");
+--items:
+insert into items(name, description, price, stock, category_id) values("Sumsang b50", "hape keren dari merek sumsang", 4000000, 100, 1), ("Uniklooh","baju keren dari brand ternama", 500000,50, 2), ("IMHO Watch", "jam tangan anak yang jujur banget", 2000000, 10,1);
+
+soal 4
+a.
+select id, name, email from users;
+
+b.
+select * from items where price>1000000;
